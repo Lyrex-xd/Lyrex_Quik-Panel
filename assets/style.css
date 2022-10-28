@@ -1,0 +1,181 @@
+  body {
+  background-color: #353535;
+  background-image: url("./../desktop.jpg");
+  background-size: 2000px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #e4e4e4;
+  }
+
+.veenir-google-header-content{
+    float: right;
+    height: 40px;
+    line-height: 40px;
+  }
+  .veenir-google-content{
+    text-decoration: none;
+    color: #e4e4e4;
+    position: relative;
+    display: inline;
+    right:10px;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 20px
+  }
+  .veenir-icon{
+    font-size: 30px;
+    position: relative; 
+    top: 7px;
+  }
+  .azar-google-image{
+      height: 20px;
+      width: 20px;
+      border-radius:50%;
+      background: url("https://lh3.googleusercontent.com/-Q_7ZnDcMD00/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reVzGWjvS75N2UMmnJH5egu8aAEbA/photo.jpg?sz=46");
+      background-color: gray;
+      padding: 10px;
+      float: right;
+  }
+  
+  .veenir-google-image{
+    margin: 0 auto;
+    width: 50%;
+    
+  }
+  .veenir-google-s{
+    position: relative;
+    top: 150px;
+    text-align: center;
+  }
+  .google-img{
+    width: 350px;
+    height: auto;
+  }
+  
+  .azarblah{
+    max-width: 60%;
+    min-width: 40%;
+    border-radius: 25px;
+    border: 1px solid gainsboro;
+    margin-top: 20px;
+    padding: 10px;
+    padding-right: 35px;
+    padding-left: 45px;
+  }
+  .azarblah:focus{
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  }
+  .azarblah:hover{
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  }
+  .azarblah:focus{
+    outline: none;
+  }
+  .micropho{
+    position: relative;
+    right: 45px;
+    width: 25px;
+  }
+  .search-icon{
+    position: relative;
+    left: 35px;
+    font-size: 20px;
+    top: 4px;
+    color: #353535;
+  }
+  
+  .dont-know-veenir-googe{
+    width: 100%;
+    text-align: center;
+    height: 35px;
+    position: relative;
+    top: 170px;
+    line-height: 35px;
+    display: none;    
+  }
+  .dont-know-items-veenir-google{
+    display: inline-block;
+  /*   text-indent: 10px; */
+    background: #f5f5f5;
+    padding-right: 10px;
+    height: 35px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-family: arial,sans-serif;
+    color:#5F6368;
+    text-decoration: none;
+    
+  }
+  
+  .veenir-google-footer{
+    position: fixed;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    height: 40px; 
+    line-height: 10px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .veenir-google-footer ul li{
+    float: left;
+    text-indent: 10px;
+    list-style: none;
+    text-decoration: none; 
+  }
+  
+  .veenir-google-footer ul li a{
+    text-decoration: none; 
+    color: rgba(0,0,0,.54);
+    font-size: 13px;
+  }
+  .veenir-g-item-right{
+    float: right;
+    position: relative;
+    top: -15px;
+    right: 10px;
+  }
+
+  .mini_title {
+    font-size: 12px;
+  }
+  
+  .circle_button_menu {
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 220px;
+  }
+
+  .versions {
+    color: #5F6368;
+    font-size: small;
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 66, 66);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(188, 35, 35);
+}
