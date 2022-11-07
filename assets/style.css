@@ -1,10 +1,20 @@
+  html, body {
+    height: 100%;
+  }
+
   body {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   background-color: #353535;
   background-image: url("./../desktop.jpg");
-  background-size: 2000px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: #e4e4e4;
+  width: auto;
+  height: auto;
   }
 
 .veenir-google-header-content{
@@ -27,6 +37,70 @@
     position: relative; 
     top: 7px;
   }
+
+  .localhost_button {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+    height: auto;
+  }
+
+  .localhost_button i {
+    font-size: 40px;
+    color: #e4e4e4;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  .localhost_box {
+    position: fixed;
+    width: min-content;
+    z-index: 1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .openlocal{
+    background-color: #e4e4e4;
+    width: 50%;
+    height: 100%;
+    animation: openlocal 2s;
+  }
+
+  .closelocal {
+    background-color: transparent;
+    width: 0;
+    height: 100%;
+    animation: closelocal 2s;
+  }
+
+  .openframe {
+    background-color: #e4e4e4;
+    width: 100%;
+    height: 100%;
+  }
+
+  .closeframe {
+    background-color: transparent;
+    width: 0;
+    height: 100%;
+  }
+
+  .opennav {
+    width: 100%;
+    background-color: #353535;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .closenav {
+    width: 0;
+    background-color: #353535;
+    border-radius: 0 0 20px 20px;
+  }
+  
   .azar-google-image{
       height: 20px;
       width: 20px;
@@ -40,7 +114,6 @@
   .veenir-google-image{
     margin: 0 auto;
     width: 50%;
-    
   }
   .veenir-google-s{
     position: relative;
@@ -158,6 +231,11 @@
     position: fixed;
     right: 10px;
     bottom: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
 
   /* width */
@@ -178,4 +256,24 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(188, 35, 35);
+}
+
+@keyframes openlocal {
+  from{
+    width: 0;
+  }
+  to{
+    width: 700px;
+  }
+}
+
+@keyframes closelocal {
+  from{
+    width: 700px;
+    background-color: #e4e4e4;
+  }
+  to{
+    width: 0;
+    background-color: #e4e4e4;
+  }
 }
