@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("space.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: auto;
+    height: auto;
+}

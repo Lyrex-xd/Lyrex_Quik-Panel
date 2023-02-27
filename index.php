@@ -1,8 +1,10 @@
 <?php
 
+include('./assets/data/bg-config.php');
 require_once('./assets/data/conn.php');
 require_once('./assets/data/main_class.php');
-
+$json = file_get_contents("./assets/data/bg-data.json"); // dosyayı oku
+$data = json_decode($json, true); // JSON verilerini PHP dizisine dönüştür
 $main = new Main();
 
 $fav_web_table = $conn->prepare('SELECT * FROM fav_web');
@@ -77,10 +79,43 @@ if(isset($_GET['del'])) {
     <link rel="shortcut icon" href="./assets/Image/icon/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <iframe class="bg_frame" src="<?php echo $data['active-bg-source'] ?>" frameborder="0"></iframe>
 
-  <div class="add_web_site_content" id="add_web_site_content">
-    <div class=" register_web_site">
+  <div class="bg_selector_content" id="bg_selector_content">
+    <div class="bg_selector_from">
+      <h1>Arka Plan</h1>
       <form action="#" method="post">
+        <div>
+          <?php
+          foreach($data["packs"] as $packs){
+          ?>
+          <div class="bg_selector_img_content">
+            <div class="bg_selector_img_content_box">
+              <iframe src="./assets/bg-packs/<?php echo $packs["folder-name"] ?>/<?php echo $packs["main-file"] ?>" frameborder="0"> </iframe>
+              <div class="bg_selector_img_content_bottom">
+                <div>
+                <p class="bg_selector_img_paragraph"><?php echo $packs["name"] ?></p>
+                <span><?php echo $packs["created"] ?></span>
+                </div>
+                <input type="radio" class="bg_selector_radio_input" name="bg" value="<?php echo $packs["folder-name"] ?>" id="bg">
+              </div>
+            </div>
+          </div>
+          <?php
+          }
+          if(count($data["packs"]) == 0) {
+            echo "Arka plan bulunamadı!";
+          }
+          ?>
+        </div>
+        <input type="submit" value="Uygula" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+
+  <div class="add_web_site_content"  id="add_web_site_content">
+    <div class=" register_web_site">
+      <form action="#" method="post" id="myForm">
         <div class="mb-3">
         <h1>Yeni Site Ekle</h1>
         </div>
@@ -119,9 +154,10 @@ if(isset($_GET['del'])) {
 <!--  Header Content  -->
 <div class='veenir-google-header'>
   <div class='veenir-google-header-content'>
-  <a href="https://chat.openai.com/chat" class='veenir-google-content'><img class="browser_logo" src="./assets/Image/Logo/cheat-gpt.png" title="Cheat GPT" alt="Cheat GPT Logo"></a>
-    <a href="https://www.google.com" class='veenir-google-content'><img class="browser_logo" src="./assets/Image/Logo/Google_logo.png" title="Google" alt="Google Logo"></a>  
-    <a href="https://www.you.com" class='veenir-google-content'><img class="browser_logo" src="./assets/Image/Logo/You_logo.png" title="You Browser" alt="You Logo"></a>
+    <a href="https://chat.openai.com/chat" target="_blank" class='veenir-google-content'><img class="browser_logo" src="./assets/Image/Logo/cheat-gpt.png" title="Cheat GPT" alt="Cheat GPT Logo"></a>
+    <a href="https://www.google.com" target="_blank" class='veenir-google-content'><img class="browser_logo" src="./assets/Image/Logo/Google_logo.png" title="Google" alt="Google Logo"></a>  
+    <a href="https://www.you.com" target="_blank" class='veenir-google-content'><img class="browser_logo" src="./assets/Image/Logo/You_logo.png" title="You Browser" alt="You Logo"></a>
+    <a onclick="open_bg_change()" class='veenir-google-content'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="browser_logo"><title>Arka Plan Değiştir</title><path d="M22.7 14.3L21.7 15.3L19.7 13.3L20.7 12.3C20.8 12.2 20.9 12.1 21.1 12.1C21.2 12.1 21.4 12.2 21.5 12.3L22.8 13.6C22.9 13.8 22.9 14.1 22.7 14.3M13 19.9V22H15.1L21.2 15.9L19.2 13.9L13 19.9M11.21 15.83L9.25 13.47L6.5 17H13.12L15.66 14.55L13.96 12.29L11.21 15.83M11 19.9V19.05L11.05 19H5V5H19V11.31L21 9.38V5C21 3.9 20.11 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.11 3.9 21 5 21H11V19.9Z" /></svg></a>
   </div>
 </div>
 <!-- End of Header -->
@@ -162,7 +198,7 @@ if(isset($_GET['del'])) {
     <?php
       }
     ?>
-    <div class="col-sm-4 circle_button">
+    <div class="col-sm-4 circle_button" id="new_web_button">
         <a onclick="new_web_page_open()" target="_blank">
           <img src="./assets/Image/icon/add_icon.png" class="add_icon" alt="add_icon" id="circle_button_image">
           <h2 id="circle_button_title">Yeni Ekle</h2>

@@ -1,0 +1,17 @@
+{
+    "active-bg-source" : "./assets/bg-packs/space/",
+    "ins-packages" : [
+        {
+            "folder-name" : "Varsayılan : Space"
+        }
+    ],
+    "packs" : [
+        {
+            "name" : "Varsayılan : Space",
+            "folder-name" : "space",
+            "version" : 1.0,
+            "created" : "Lyrex.xD",
+            "main-file" : "./index.html"
+        }
+    ]
+}

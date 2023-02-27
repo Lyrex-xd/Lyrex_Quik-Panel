@@ -3,13 +3,20 @@
   }
 
   body {
-  background-color: #353535;
-  background-image: url("./Image/desktop.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-color: #252525;
   color: #e4e4e4;
   width: auto;
   height: auto;
+  }
+
+  .bg_frame {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 .veenir-google-header-content{
@@ -52,14 +59,6 @@
     position: fixed;
     width: min-content;
     z-index: 1;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .block {
-    display: block !important;
   }
 
   .openlocal{
@@ -293,7 +292,7 @@
     border-radius: 100%;
     display: block;
     margin-left: auto;
-    margin-right: 17%;
+    margin-right: 18%;
     margin-bottom: 10px;
   }
 
@@ -318,7 +317,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1;
   }
 
   .register_web_site {
@@ -332,6 +331,7 @@
     border-radius: 15px;
     text-align: center;
     font-size: 100%;
+    z-index: 3;
   }
 
   .register_web_site input[type=text] {
@@ -344,6 +344,116 @@
     width: 30%;
   }
 
+  /* Arka Plan Değişim Formu */
+  .bg_selector_content {
+    background-color: #e4e4e478;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+  }
+
+  .bg_selector_from {
+    background-color: #353535;
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    margin-top: 180px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 100%;
+    z-index: 3;
+  }
+
+  .bg_selector_from>form>div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bg_selector_img_content {
+    margin: 5px;
+    text-align: left;
+  }
+
+  .bg_selector_img {
+    width: 250px;
+    border-radius: 5px;
+  }
+
+  .bg_selector_img_content_box iframe {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .bg_selector_img_content_box {
+    width: 260px;
+    text-align: center;
+    background-color: #252525;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.2s;
+    margin-bottom: 6px;
+  }
+
+  .bg_selector_img_content_box:hover {
+    padding:8px;
+    width:266px;
+    margin-bottom:0;
+  }
+
+  .bg_selector_img_paragraph {
+    padding: 0;
+    padding-top: 0;
+    margin-top: -10px;
+    margin: 0;
+    text-align:left;
+  }
+
+/* radio butonunun etrafındaki çerçeve */
+.bg_selector_radio_input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  outline: none;
+  cursor: pointer;
+  position:relative;
+  left: 100px;
+  bottom: 20px;
+}
+
+/* radio butonunun işaretlenmiş halindeki renk */
+.bg_selector_radio_input:checked {
+  border-color: #353535;
+  background-color: #fff;
+}
+
+/* radio butonunun işaretlenmemiş halindeki renk */
+.bg_selector_radio_input:not(:checked) {
+  border-color: #fff;
+  background-color: #353535;
+}
+
+.bg_selector_img_content_bottom {
+  display: flex;
+}
+
+.bg_selector_img_content_bottom>div {
+  text-align: left;
+}
+
+.bg_selector_img_content_bottom>div>span {
+  color: #5F6368;
+}
+
+  /* Diğer */
+
   .versions {
     color: #5F6368;
     font-size: small;
@@ -355,6 +465,16 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+  }
+
+  .not-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+  .block {
+    display: block;
   }
 
   /* width */

@@ -8,9 +8,15 @@ let back_arrow = document.getElementById("back_arrow");
 let reload_icon = document.getElementById("reload_icon");
 let openweb = document.getElementById("openweb");
 let url_bar = document.getElementById("url_bar_div");
-let url_bar_input = document.getElementById('url_bar_input'); 
+let url_bar_input = document.getElementById('url_bar_input');
+let form = document.getElementById("myForm");
+let add_web_site_content = document.getElementById("add_web_site_content");
+let new_web_button = document.getElementById("new_web_button");
 
 // local menünün düzgün bir şekilde açılması için gerekli ayarlamaları yapar
+
+reload_icon.style.display= "none";
+back_arrow.style.display= "none";
 function openlocal() {
     if (kontrol == false) {
         local_window.setAttribute("class","localhost_box openlocal");
@@ -68,6 +74,10 @@ function new_web_page_open() {
     add_web_site_content.setAttribute('class','block add_web_site_content')
 }
 
+function new_web_page_close() {
+    add_web_site_content.setAttribute('class','hidden add_web_site_content')
+}
+
 function goster(id) {
     document.getElementById('close_button-'+ id).style.display = "block";
 }
@@ -75,3 +85,17 @@ function goster(id) {
 function gizle(id) {
     document.getElementById('close_button-'+ id).style.display = "none";
 }
+
+new_web_button.addEventListener("click",function() {
+    add_web_site_content.addEventListener("click", function(event) {
+        if (event.target !== form && !form.contains(event.target)) {
+            add_web_site_content.setAttribute('class','hidden add_web_site_content')
+        }
+    });
+});
+
+function open_bg_change() {
+    var bg_selector_content = document.getElementById("bg_selector_content");
+    console.log("çalıştı");
+    bg_selector_content.style.display = "block";
+};
