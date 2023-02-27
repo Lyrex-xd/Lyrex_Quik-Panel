@@ -39,6 +39,11 @@ Mini pencerenin açılmış hali:
 <hr>
 <h2>Lyrex Quik Panel v1.3:</h2>
 <img src="./4_Lyrex_quick_panel_fav_website.png?raw=true" width="800"/>
-Bu güncellemeden sonra arama yerinin tam altına favori web sitelerinizi ekleyebilirsiniz/kaldırabilirsiniz.
-<br>
+Bu güncellemeden sonra arama yerinin tam altına favori web sitelerinizi ekleyebilirsiniz/kaldırabilirsiniz. Girilen site linklerinden %65 ihtimal ile sayfanın logosunu da çekiyor.
+
+<hr>
+<h2>Lyrex Quik Panel v1.6</h2>
+<img src="./5_Lyrex_quick_panel_bg_select.png?raw=true" width="800"/>
+Bu güncelleme ile beraber istediğiniz arka planı ekleyebilirsiniz. Sadece yapmanız gereken "Lyrex_Quik_Panel/assets/bg-paks/" klasörü içine önce ki benim hazırladığım gibi arka plan paketlerini örnek alarak sizde kendinize özel arka plan paketleri hazırlayıp kullanabilirsiniz.
+<br><br>
 Geliştirmelerinizi benim ile paylaşmak için : Baran_Yilmaz35@hotmail.com
