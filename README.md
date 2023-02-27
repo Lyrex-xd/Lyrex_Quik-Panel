@@ -46,4 +46,4 @@ Bu güncellemeden sonra arama yerinin tam altına favori web sitelerinizi ekleye
 <img src="./5_Lyrex_quick_panel_bg_select.png?raw=true" width="800"/>
 Bu güncelleme ile beraber istediğiniz arka planı ekleyebilirsiniz. Sadece yapmanız gereken "Lyrex_Quik_Panel/assets/bg-paks/" klasörü içine önce ki benim hazırladığım gibi arka plan paketlerini örnek alarak sizde kendinize özel arka plan paketleri hazırlayıp kullanabilirsiniz.
 <br><br>
-Geliştirmelerinizi benim ile paylaşmak için : Baran_Yilmaz35@hotmail.com
+Öneri/yorum ve geliştirmelerinizi benim ile paylaşmak için : Baran_Yilmaz35@hotmail.com
