@@ -10,7 +10,24 @@ Local Host için minik bir panel eklendi.
 <strong>Lyrex Quik Panel v1.0 :</strong><br>
 <br/>
 <img src="./1_screenshot_v1.0.png?raw=true" width="800" />
-
+Arama yerine kısa yollar eklendi kısa yol kullanma klavuzu:
+<ul>
+  <li>
+  "Udemy" = udemy kütüphanenize yönlendirir.(eğer "https://www.udemy.com" 'da oturumunuz açık ise)
+  </li>
+  <li>
+  "Github" = sizi otomatik olarak "https://github.com" adresine yönlendirir.
+  </li>
+  <li>
+  "Repo | Repositories | Depo" = Sizi benim github depolarıma yönlendirir. (kodlardan bunu kendi profilinize yönlendirebilirsiniz) 
+  </li>
+  <li>
+  "Youtube" = Youtube'un ana sayfasına yönlendirir.
+  </li>
+  <li>
+  "yt:<metin>" = "yt:" yazdıktan sonra ne yazarsanız youtube da aratır.
+  </li>
+</ul>
 <hr>
 
 <strong>Lyrex Quik Panel v1.1:</strong> <br><br>
