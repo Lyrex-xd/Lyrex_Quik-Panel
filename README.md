@@ -9,11 +9,11 @@ Local Host için minik bir panel eklendi.
 
 <strong>Lyrex Quik Panel v1.0 :</strong><br>
 <br/>
-<img src="./screenshot_v1.0.png?raw=true" width="800" />
+<img src="./1_screenshot_v1.0.png?raw=true" width="800" />
 
 <hr>
 
 <strong>Lyrex Quik Panel v1.1:</strong> <br><br>
-<img src="./screenshot_v1.1.png?raw=true" width="800" />
+<img src="./2_screenshot_v1.1.png?raw=true" width="800" />
 <br>
 Geliştirmelerinizi benim ile paylaşmak için : Baran_Yilmaz35@hotmail.com
